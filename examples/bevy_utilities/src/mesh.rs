@@ -29,7 +29,7 @@ pub fn create_mesh_bundle(
         "Vertex_Position",
         VertexAttributeValues::Float3(mesh.positions),
     );
-    render_mesh.set_attribute("Vertex_Normal", VertexAttributeValues::Float3(mesh.normals));
+    render_mesh.set_attribute("Vertex_Normal", VertexAttributeValues::Float32x3(mesh.normals));
     render_mesh.set_attribute(
         "Vertex_Uv",
         VertexAttributeValues::Float2(vec![[0.0; 2]; num_vertices]),
