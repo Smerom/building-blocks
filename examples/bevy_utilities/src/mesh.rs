@@ -27,12 +27,12 @@ pub fn create_mesh_bundle(
     let mut render_mesh = Mesh::new(PrimitiveTopology::TriangleList);
     render_mesh.set_attribute(
         "Vertex_Position",
-        VertexAttributeValues::Float3(mesh.positions),
+        VertexAttributeValues::Float32x3(mesh.positions),
     );
     render_mesh.set_attribute("Vertex_Normal", VertexAttributeValues::Float3(mesh.normals));
     render_mesh.set_attribute(
         "Vertex_Uv",
-        VertexAttributeValues::Float2(vec![[0.0; 2]; num_vertices]),
+        VertexAttributeValues::Float32x2(vec![[0.0; 2]; num_vertices]),
     );
     render_mesh.set_indices(Some(Indices::U32(mesh.indices)));
 
